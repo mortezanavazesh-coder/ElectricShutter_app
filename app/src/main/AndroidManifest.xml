@@ -7,18 +7,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ElectricShutterApp">
-        
-        <!-- Activity اصلی -->
-        <activity android:name=".ui.main.MainScreen">
+
+        <!-- Activity اصلی (Launcher) -->
+        <activity
+            android:name=".ui.main.MainScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- سایر Activity ها (BasePriceScreen, ReportsPageScreen) -->
-        <activity android:name=".ui.baseprice.BasePriceScreen" />
-        <activity android:name=".ui.reports.ReportsPageScreen" />
+        <!-- سایر Activity ها -->
+        <activity
+            android:name=".ui.baseprice.BasePriceScreen"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.reports.ReportsPageScreen"
+            android:exported="false" />
 
     </application>
 
