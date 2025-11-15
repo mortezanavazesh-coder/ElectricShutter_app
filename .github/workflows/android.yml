@@ -1,4 +1,4 @@
-name: Android CI
+name: Android CI - Build APK
 
 on:
   push:
@@ -21,5 +21,14 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Build APK
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+
+    - name: Build Debug APK
       run: ./gradlew assembleDebug
+
+    - name: Upload APK as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ElectricShutterApp-debug-apk
+        path: app/build/outputs/apk/debug/app-debug.apk
