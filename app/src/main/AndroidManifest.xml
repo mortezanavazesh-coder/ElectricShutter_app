@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ElectricShutter_app.electricshutterapp">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,13 +8,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ElectricShutterApp">
         
+        <!-- Activity اصلی -->
         <activity android:name=".ui.main.MainScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
+        <!-- سایر Activity ها (BasePriceScreen, ReportsPageScreen) -->
+        <activity android:name=".ui.baseprice.BasePriceScreen" />
+        <activity android:name=".ui.reports.ReportsPageScreen" />
+
     </application>
 
 </manifest>
