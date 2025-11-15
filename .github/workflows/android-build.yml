@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -20,12 +21,15 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
+    # ✅ فقط gradlew executable شود
     - name: Make gradlew executable
       run: chmod +x gradlew
 
+    # ✅ ساخت APK نسخه Debug
     - name: Build Debug APK
       run: ./gradlew assembleDebug
 
+    # ✅ آپلود APK به عنوان artifact با نسخه جدید
     - name: Upload APK as artifact
       uses: actions/upload-artifact@v4
       with:
