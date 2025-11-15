@@ -1,37 +1,46 @@
-name: Android CI - Build APK
+name: Build Android APK
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
-
+    name: Build APK
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
-    # ✅ فقط gradlew executable شود
-    - name: Make gradlew executable
-      run: chmod +x gradlew
+      - name: Cache Gradle
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}
 
-    # ✅ ساخت APK نسخه Debug
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      - name: Grant execute permission to Gradle
+        run: chmod +x ./gradlew
 
-    # ✅ آپلود APK به عنوان artifact با نسخه جدید
-    - name: Upload APK as artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: ElectricShutterApp-debug-apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Build APK
+        run: ./gradlew :app:assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: shutter-calculator-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
