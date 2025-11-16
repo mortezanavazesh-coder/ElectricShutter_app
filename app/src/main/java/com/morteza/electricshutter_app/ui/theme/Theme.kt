@@ -1,5 +1,5 @@
 
-package com.morteza.shuttercalculator.shuttercalculator.ui.theme
+package com.morteza.shuttercalculator.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -61,3 +61,4 @@ fun ShutterCalculatorTheme(
         content = content
     )
 }
+
