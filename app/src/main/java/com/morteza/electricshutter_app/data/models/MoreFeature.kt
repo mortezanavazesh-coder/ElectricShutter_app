@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.data.models
+package com.morteza.electricshutter_app.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,4 +8,5 @@ data class MoreFeature(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val name: String,
     val price: Long
+
 )
