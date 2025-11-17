@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.shuttercalculator.ui.theme
+package com.morteza.electricshutter_app.ui.theme
 
 import androidx.compose.material3.Typography
 
