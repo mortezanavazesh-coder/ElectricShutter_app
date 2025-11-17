@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.data.db
+package com.morteza.electricshutter_app.data.db.dao
 
 import androidx.room.*
 import com.electricshutter_app.data.models.CostEntity
@@ -12,4 +12,5 @@ interface CostDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdate(cost: CostEntity)
+
 }
