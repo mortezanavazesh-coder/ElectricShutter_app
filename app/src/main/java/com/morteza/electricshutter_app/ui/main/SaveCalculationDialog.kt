@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.ui.main
+package com.morteza.electricshutter_app.ui.main
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -56,4 +56,5 @@ fun SaveCalculationDialog(
             TextButton(onClick = onDismiss) { Text("انصراف") }
         }
     )
+
 }
