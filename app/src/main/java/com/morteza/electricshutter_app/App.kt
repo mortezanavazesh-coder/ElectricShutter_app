@@ -1,3 +1,5 @@
+package com.morteza.electricshutter_app
+
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -21,4 +23,5 @@ fun AppNavHost() {
         composable(Screen.Reports.route) { ReportsPageScreen(navController) }
     }
 }
+
 
