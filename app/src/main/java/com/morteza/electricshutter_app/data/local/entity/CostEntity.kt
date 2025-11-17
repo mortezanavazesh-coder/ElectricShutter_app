@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.data.models
+package com.morteza.electricshutter_app.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,3 +10,4 @@ data class CostEntity(
     val welding: Long = 0L,
     val transport: Long = 0L
 )
+
