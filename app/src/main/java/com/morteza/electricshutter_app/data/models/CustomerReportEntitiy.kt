@@ -1,4 +1,4 @@
-حpackage com.morteza.electricshutter_app.data.models
+package com.morteza.electricshutter_app.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -28,3 +28,4 @@ data class CustomerReportEntity(
     val totalPrice: Long
 
 )
+
