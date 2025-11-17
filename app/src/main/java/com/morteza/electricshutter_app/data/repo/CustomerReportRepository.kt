@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.data.repo
+package com.morteza.electricshutter_app.data.repo
 
 import com.electricshutter_app.data.db.AppDatabase
 import com.electricshutter_app.data.models.CustomerReportEntity
@@ -12,4 +12,5 @@ class CustomerReportRepository(private val db: AppDatabase) {
 
     fun searchReportsByName(name: String): Flow<List<CustomerReportEntity>> =
         db.customerReportDao().searchByName("%$name%")
+
 }
