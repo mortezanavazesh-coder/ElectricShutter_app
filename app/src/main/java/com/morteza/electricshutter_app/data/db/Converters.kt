@@ -1,4 +1,5 @@
-package com.morteza.shuttercalculator.data.db
+
+package com.morteza.electricshutter_app.data.db
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
@@ -19,4 +20,5 @@ class Converters {
     fun fromListToString(list: List<String>?): String {
         return gson.toJson(list ?: emptyList<String>())
     }
+
 }
