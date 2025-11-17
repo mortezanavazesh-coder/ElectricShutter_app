@@ -3,27 +3,28 @@ package com.morteza.electricshutter_app.data.local.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
 @Entity(tableName = "customer_reports")
 data class CustomerReportEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val customerName: String,
-    val customerPhone: String?, // اختیاری
-    val date: Long = System.currentTimeMillis(), // زمان ذخیره به صورت timestamp
-    val height: Double, // متر
-    val width: Double,  // متر
-    val area: Double,   // متر مربع
-    val bladeType: String,
-    val motorType: String,
-    val priceBlade: Long,
-    val priceMotor: Long,
-    val shaftType: String,
-    val priceShaft: Long,
-    val boxType: String?,
-    val priceBox: Long?,
-    val installationCost: Long,
-    val weldingCost: Long,
-    val transportCost: Long,
-    val extraFeatures: String?, // نام امکانات بیشتر انتخاب شده به صورت کاما جدا
-    val extraFeaturesPrice: Long,
-    val totalPrice: Long
+    @PrimaryKey(autoGenerate = true) var id: Int = 0,
+    var customerName: String,
+    var customerPhone: String?, // اختیاری
+    var date: Long = System.currentTimeMillis(), // زمان ذخیره به صورت timestamp
+    var height: Double, // متر
+    var width: Double,  // متر
+    var area: Double,   // متر مربع
+    var bladeType: String,
+    var motorType: String,
+    var priceBlade: Long,
+    var priceMotor: Long,
+    var shaftType: String,
+    var priceShaft: Long,
+    var boxType: String?,
+    var priceBox: Long?,
+    var installationCost: Long,
+    var weldingCost: Long,
+    var transportCost: Long,
+    var extraFeatures: String?, // نام امکانات بیشتر انتخاب شده به صورت کاما جدا
+    var extraFeaturesPrice: Long,
+    var totalPrice: Long
 )
