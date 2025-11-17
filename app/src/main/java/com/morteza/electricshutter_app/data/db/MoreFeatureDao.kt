@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.db
+package com.morteza.electricshutter_app.data.db
 
 import androidx.room.*
 import com.electricshutter_app.data.models.MoreFeature
@@ -36,4 +36,5 @@ interface MoreFeatureDao {
     fun getExtras(): Flow<List<MoreFeature>>
     @Insert suspend fun insertExtra(feature: MoreFeature)
     @Delete suspend fun deleteExtra(feature: MoreFeature)
+
 }
