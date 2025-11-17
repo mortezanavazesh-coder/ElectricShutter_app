@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.ui.baseprice
+package com.morteza.electricshutter_app.ui.baseprice
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -186,4 +186,5 @@ fun PriceListCard(
             Button(onClick = onAdd) { Text("افزودن") }
         }
     }
+
 }
