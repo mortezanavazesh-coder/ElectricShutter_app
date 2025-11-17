@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.db
+ppackage com.morteza.electricshutter_app.data.db.dao
 
 import androidx.room.*
 import com.electricshutter_app.data.models.CustomerReportEntity
@@ -18,4 +18,5 @@ interface CustomerReportDao {
 
     @Query("SELECT * FROM customer_reports WHERE customerName LIKE :name ORDER BY date DESC")
     fun searchByName(name: String): Flow<List<CustomerReportEntity>>
+
 }
