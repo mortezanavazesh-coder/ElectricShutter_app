@@ -1,8 +1,6 @@
-
-package com.morteza.shuttercalculator.ui.theme
+package com.morteza.electricshutter_app.ui.theme
 
 import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -37,19 +35,18 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun ShutterCalculatorTheme(
+fun AppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-
-    val colorScheme =
-        if (darkTheme) DarkColors else LightColors
+    val colorScheme = if (darkTheme) DarkColors else LightColors
 
     val view = LocalView.current
     if (!view.isInEditMode) {
         val window = (view.context as Activity).window
         window.statusBarColor = colorScheme.background.toArgb()
         window.navigationBarColor = colorScheme.background.toArgb()
+
         WindowCompat.getInsetsController(window, view)
             .isAppearanceLightStatusBars = !darkTheme
     }
@@ -61,4 +58,3 @@ fun ShutterCalculatorTheme(
         content = content
     )
 }
-
