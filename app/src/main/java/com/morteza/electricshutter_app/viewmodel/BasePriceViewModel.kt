@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.viewmodel
+package com.morteza.electricshutter_app.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -58,4 +58,5 @@ class BasePriceViewModel(private val repo: BasePriceRepository) : ViewModel() {
     fun deleteBox(box: MoreFeature) = viewModelScope.launch { repo.deleteBox(box) }
     fun addExtra(feature: MoreFeature) = viewModelScope.launch { repo.insertFeature(feature) }
     fun deleteExtra(feature: MoreFeature) = viewModelScope.launch { repo.deleteFeature(feature) }
+
 }
