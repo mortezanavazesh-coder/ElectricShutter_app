@@ -21,3 +21,4 @@ fun AppNavHost() {
         composable(Screen.Reports.route) { ReportsPageScreen(navController) }
     }
 }
+
