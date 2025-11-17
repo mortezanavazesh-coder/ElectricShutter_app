@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.data.models
+حpackage com.morteza.electricshutter_app.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -26,4 +26,5 @@ data class CustomerReportEntity(
     val extraFeatures: String?, // نام امکانات بیشتر انتخاب شده به صورت کاما جدا
     val extraFeaturesPrice: Long,
     val totalPrice: Long
+
 )
