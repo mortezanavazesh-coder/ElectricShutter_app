@@ -3,12 +3,12 @@ package com.morteza.electricshutter_app.data.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.morteza.electricshutter_app.data.db.dao.CustomerReportDao
-import com.morteza.electricshutter_app.data.db.dao.CostDao
-import com.morteza.electricshutter_app.data.db.dao.MoreFeatureDao
-import com.morteza.electricshutter_app.data.local.entity.CustomerReportEntity
 import com.morteza.electricshutter_app.data.local.entity.CostEntity
-import com.morteza.electricshutter_app.data.local.entity.MoreFeature
+import com.morteza.electricshutter_app.data.models.CustomerReportEntity
+import com.morteza.electricshutter_app.data.models.MoreFeature
+import com.morteza.electricshutter_app.data.db.dao.MoreFeatureDao
+import com.morteza.electricshutter_app.data.db.dao.CostDao
+import com.morteza.electricshutter_app.data.db.dao.CustomerReportDao
 
 @Database(
     entities = [CustomerReportEntity::class, MoreFeature::class, CostEntity::class],
