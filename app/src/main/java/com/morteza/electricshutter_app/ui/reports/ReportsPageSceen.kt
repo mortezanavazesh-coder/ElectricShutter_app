@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.ui.reports
+package com.morteza.electricshutter_app.ui.reports
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -86,4 +86,5 @@ fun ReportsPageScreen(navController: NavController, viewModel: ReportsViewModel)
             Text("بازگشت به صفحه اصلی")
         }
     }
+
 }
