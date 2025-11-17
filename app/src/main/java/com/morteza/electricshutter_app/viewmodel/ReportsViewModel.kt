@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.viewmodel
+package com.morteza.electricshutter_app.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -33,4 +33,5 @@ class ReportsViewModel(private val repo: CustomerReportRepository) : ViewModel()
             _reports.value = it
         }
     }
+
 }
