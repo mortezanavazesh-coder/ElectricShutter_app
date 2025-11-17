@@ -1,4 +1,4 @@
-package ccom.morteza.shuttercalculator.data.repo
+package com.morteza.electricshutter_app.data.repo
 
 import com.electricshutter_app.data.db.AppDatabase
 import com.electricshutter_app.data.models.CostEntity
@@ -35,4 +35,5 @@ class BasePriceRepository(private val db: AppDatabase) {
     // --- هزینه‌های اجرایی ---
     fun getCosts(): Flow<CostEntity> = db.costDao().getCosts()
     suspend fun saveCosts(cost: CostEntity) = db.costDao().insertOrUpdate(cost)
+
 }
