@@ -1,7 +1,7 @@
-ppackage com.morteza.electricshutter_app.data.db.dao
+package com.morteza.electricshutter_app.data.db.dao
 
 import androidx.room.*
-import com.electricshutter_app.data.models.CustomerReportEntity
+import com.morteza.electricshutter_app.data.local.entity.CustomerReportEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -10,7 +10,7 @@ interface CustomerReportDao {
     @Query("SELECT * FROM customer_reports ORDER BY date DESC")
     fun getAllReports(): Flow<List<CustomerReportEntity>>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertReport(report: CustomerReportEntity)
 
     @Delete
@@ -18,5 +18,4 @@ interface CustomerReportDao {
 
     @Query("SELECT * FROM customer_reports WHERE customerName LIKE :name ORDER BY date DESC")
     fun searchByName(name: String): Flow<List<CustomerReportEntity>>
-
 }
