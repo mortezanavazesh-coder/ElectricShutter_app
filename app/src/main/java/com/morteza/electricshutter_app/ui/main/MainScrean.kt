@@ -1,4 +1,4 @@
-package com.morteza.shuttercalculator.ui.main
+package com.morteza.electricshutter_app.ui.main
 
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.*
@@ -260,4 +260,5 @@ fun DropdownMenuBox(
             }
         }
     }
+
 }
