@@ -1,5 +1,5 @@
 
-package com.morteza.shuttercalculator.data.db
+package com.morteza.electricshutter_app.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -17,3 +17,4 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun costDao(): CostDao
     abstract fun customerReportDao(): CustomerReportDao
 }
+
