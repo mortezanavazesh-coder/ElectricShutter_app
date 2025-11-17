@@ -41,3 +41,4 @@ interface MoreFeatureDao {
     @Insert suspend fun insertExtra(feature: MoreFeature)
     @Delete suspend fun deleteExtra(feature: MoreFeature)
 }
+
