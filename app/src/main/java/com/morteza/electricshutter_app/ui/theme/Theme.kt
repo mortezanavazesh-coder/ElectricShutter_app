@@ -7,6 +7,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
+
+
 
 private val LightColors = lightColorScheme(
     primary = md_theme_light_primary,
@@ -58,3 +63,4 @@ fun AppTheme(
         content = content
     )
 }
+
