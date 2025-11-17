@@ -1,2 +1,3 @@
-rootProject.name = "ElectricShutterCalculator"
+rootProject.name = "ElectricShutter_app"
 include ':app'
+
