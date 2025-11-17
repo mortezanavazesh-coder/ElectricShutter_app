@@ -17,6 +17,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+   composeOptions {
+      kotlinCompilerExtensionVersion = "1.5.14"
+   }
 
     buildTypes {
         release {
@@ -64,3 +67,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 }
+
